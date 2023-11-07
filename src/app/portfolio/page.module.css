@@ -1,5 +1,5 @@
 .mainTitle{
-    font-size: 50px;
+    font-size: 4vw;
 }
 .heading{
     margin: 20px 0px;
@@ -8,6 +8,7 @@
 .items{
     display: flex;
     gap: 50px;
+    flex-wrap: wrap;
 }
 
 .item{
@@ -47,4 +48,44 @@
     transition: 0.5s;
     border-radius: 0 10px 10px 5px;
     background-color: #F09F5F;
+}
+
+@media screen and (max-width: 850px) {
+    .mainTitle{
+        font-size: 6vw;
+    }
+    .item{
+        height: 250px;
+    }
+}
+@media screen and (max-width: 750px) {
+   .heading{
+    font-size: 4vw;
+   }
+   .item{
+    width: 100%;
+    height: 400px;
+   }
+}
+@media screen and (max-width: 600px) {
+   .item{
+    height: 300px;
+   }
+}
+@media screen and (max-width: 430px) {
+   .item{
+    height: 250px;
+   }
+}
+@media screen and (max-width: 380px) {
+    
+    .container, .mainTitle{
+        margin: 0 -30px;
+    }
+   .item{
+    height: 200px;
+   }
+   .title{
+    font-size: 15px;
+   }
 }

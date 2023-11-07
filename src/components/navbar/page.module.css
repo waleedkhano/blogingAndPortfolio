@@ -9,11 +9,21 @@
     font-weight: bold;
     font-size: 22px;
 }
-
+.bar, .cross{
+    display: none;
+}
 .links{
     display: flex;
     align-items: center;
     gap: 20px;
+}
+.linkData .link{
+    margin: 10px;
+}
+.linkData .link:hover{
+    transition: 0.3s;
+    border-bottom: 1px solid #F09F5F;
+color: #F09F5F;
 }
 
 .logout{
@@ -28,3 +38,48 @@
 .logo span{
     color: #F09F5F;
 }
+
+@media screen and (max-width: 750px) {
+    .linkData{
+        display: none;
+    }
+    .bar{
+        display: block;
+        cursor: pointer;
+    }
+    .active{
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        z-index: 9;
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+        padding: 40%;
+    }
+.crossActive{
+    display: block;
+    position: absolute;
+    z-index: 99;
+    top: 40px;
+    cursor: pointer;
+}
+
+  }
+@media screen and (max-width: 400px) {
+    .active{
+        padding: 30%;
+    }
+    .logo{
+        font-size: 18px;
+    }
+
+  }
+@media screen and (max-width: 380px) {
+    .container{
+        margin: 0 -30px;
+    }
+
+  }

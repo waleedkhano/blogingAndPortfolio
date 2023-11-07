@@ -43,3 +43,32 @@
   color: #999;
   text-align: justify;
 }
+
+@media screen and (max-width: 950px) {
+  .content{
+      font-size: 90%;
+  }
+
+}
+@media screen and (max-width: 550px) {
+  .container{
+      font-size: 80%;
+  }
+  .imageContainer {
+    height: 200px;
+  }
+
+}
+@media screen and (max-width: 480px) {
+ .desc{
+  margin: 20px 0;
+ }
+ .top{
+  flex-direction: column;
+ }
+}
+@media screen and (max-width: 380px) {
+  .container{
+      margin: 0 -30px;
+  }
+}

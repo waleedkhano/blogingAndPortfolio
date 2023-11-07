@@ -29,7 +29,8 @@ async function Blog() {
         <div className={styles.imgContainer}>
           <Image
           src={item.img}
-          alt=''
+          alt='blog-image'
+          layout='responsive'
           width={400}
           height={250}
           className={styles.image}

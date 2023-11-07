@@ -1,11 +1,19 @@
 .container{
     display: flex;
+    width: 80vw;
     align-items: center;
+    justify-content: center;
     gap: 50px;
     margin-bottom: 50px;
 }
-
-.image{
+.imgContainer{
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.imgContainer img{
     object-fit: cover;
 }
 
@@ -13,3 +21,71 @@
     margin-bottom: 10px;
 }
 
+.content{
+    width: 75%;
+}
+
+@media screen and (max-width: 900px) {
+    .content{
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .content{
+        font-size: 70%;
+    }
+    .container{
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .content{
+        font-size: 60%;
+    }
+    .imgContainer{
+        width: 300px;
+        height: 150px;
+    }
+    .maincontainer{
+        margin: 0 -30px;
+    }
+    .container{
+        width: 90vw;
+        gap: 30px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .content{
+        font-size: 55%;
+    }
+    .imgContainer{
+        width: 200px;
+        height: 100px;
+    }
+    .maincontainer{
+        margin-left: -50px;
+    }
+}
+@media screen and (max-width: 380px) {
+    .content{
+        font-size: 50%;
+    }
+    .imgContainer{
+        width: 200px;
+        height: 100px;
+    }
+    .container{
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .content{
+        font-size: 45%;
+    }
+    .imgContainer{
+        width: 150px;
+        height: 80px;
+    }
+}

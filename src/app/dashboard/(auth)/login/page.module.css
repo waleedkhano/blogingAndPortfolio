@@ -14,7 +14,7 @@
 }
 
 .input{
-    padding: 20px;
+    padding: 15px;
     background-color: transparent;
     border-radius: 10px;
     border: 1px solid gray;
@@ -54,4 +54,24 @@
    {
     background-color: rgba(228, 97, 50, 0.803);
     color: rgb(201, 200, 200);
+  }
+
+  @media screen and (max-width: 380px) {
+    .form{
+      width: 250px;
+    }
+    .input, .button, .button1{
+      padding: 10px;
+    }
+    .link{
+      font-size: 0.9rem;
+    }
+  }
+  @media screen and (max-width: 260px) {
+    .form{
+      width: 200px;
+    }
+    .link{
+      font-size: 0.8rem;
+    }
   }

@@ -1,15 +1,18 @@
 import React from 'react'
 import styles from './page.module.css'
 import Image from 'next/image'
+import { BsFacebook } from 'react-icons/bs';
+import { BsGithub } from 'react-icons/bs';
+import { BsLinkedin } from 'react-icons/bs';
 
 const Footer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.footer}>@2023 developed by waleed Khano. All rights reserved</div>
       <div className={styles.social}>
-        <Image src="/facebook.png" width={20} height={20} className={styles.icon} alt='waleed'/>
-        <Image src="/github.png" width={20} height={20} className={styles.icon} alt='waleed'/>
-        <Image src="/linkedin.png" width={20} height={20} className={styles.icon} alt='waleed'/>
+        <BsFacebook size={20}/>
+        <BsGithub size={20}/>
+        <BsLinkedin size={20}/>
       </div>
     </div>
   )
