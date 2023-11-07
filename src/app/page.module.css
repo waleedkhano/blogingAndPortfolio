@@ -1,0 +1,47 @@
+.container{
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.item{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.title{
+  font-size: 3.5vw;
+  background: linear-gradient(to bottom, #F09F5F, rgb(193, 193, 193));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  text-transform: capitalize;
+}
+.desc{
+  font-size: 1vw;
+  font-weight: 300;
+}
+
+
+
+.img{
+  width: 70%;
+  height: 500px;
+  object-fit: cover;
+  animation: move 1s infinite ease-in-out alternate;
+}
+
+@keyframes move {
+  from{
+    transform: translateY(-25px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+
+
+

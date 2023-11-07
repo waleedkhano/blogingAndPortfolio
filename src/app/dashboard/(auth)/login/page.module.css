@@ -1,0 +1,57 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input{
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid gray;
+    color: gray;
+}
+
+.button{
+    padding: 15px;
+    cursor: pointer;
+    background-color: #F09F5F;
+    border: none;
+    border-radius: 5px;
+  }
+.button1{
+    padding: 15px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  
+  .or {
+    color: #bbb;
+  }
+  
+  .link {
+    text-decoration: underline;
+    color: #7d7c7c;
+  }
+  
+  .link:hover {
+    color: rgb(61, 61, 61);
+  }
+
+  .google:hover,
+  .button:hover
+   {
+    background-color: rgba(228, 97, 50, 0.803);
+    color: rgb(201, 200, 200);
+  }
