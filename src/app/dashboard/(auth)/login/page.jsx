@@ -19,12 +19,12 @@ const Login = () => {
   }
 
   const handleSubmit = async (e) =>{
-    e.preventDefault();
+    // e.preventDefault();
 
-    const email = e.target[0].value
-    const password = e.target[1].value
+    // const email = e.target[0].value
+    // const password = e.target[1].value
 
-    signIn("credentials", {email, password})
+    // signIn("credentials", {email, password})
     
     }
   
@@ -34,9 +34,9 @@ const Login = () => {
        <form className={styles.form} onSubmit={handleSubmit}>
         <input type="email" placeholder='Email' className={styles.input} required />
         <input type="password" placeholder='Password' className={styles.input} required />
-        <button className={styles.button} type='submit'>Login</button>
+        <button className={styles.button} type='submit'>Demo</button>
       </form>
-      <button className={styles.button + " " + styles.google} onClick={() => signIn("google")}>Login with google</button>
+      {/* <button className={styles.button + " " + styles.google} onClick={() => signIn("google")}>Login with google</button> */}
       <Link className={styles.link} href="/dashboard/register">
         Create new account
       </Link>
