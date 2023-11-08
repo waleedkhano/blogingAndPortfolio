@@ -4,10 +4,14 @@ import Image from 'next/image';
 import randomImg from '/public/pracImg.jpg'
 
 const getData = async (id) => {
-  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts/${id}`,{
-    cache: "no-store",
-  });
-   return res.json();
+  try {
+    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts/${id}`, {
+      cache: "no-store",
+    });
+    return res.json();
+  } catch (error) {
+    throw error;
+  }
 }
 
 export async function generateMetadata({ params }) {
@@ -21,7 +25,7 @@ export async function generateMetadata({ params }) {
 
 
 const BlogPost = async ({ params }) => {
-  const {id} = params
+  const { id } = params
   const data = await getData(id)
 
 
@@ -31,36 +35,36 @@ const BlogPost = async ({ params }) => {
         <div className={styles.info}>
           <h1 className={styles.title}>
             {data.title}
-            </h1>
-            <p className={styles.desc}>
-              {data.desc}
-            </p>
-            <div className={styles.author}>
-              <Image
+          </h1>
+          <p className={styles.desc}>
+            {data.desc}
+          </p>
+          <div className={styles.author}>
+            <Image
               src={randomImg}
               alt='author-image'
               width={40}
               height={40}
               className={styles.avatar}
-              />
-              <span className={styles.username}>{data.username}</span>
-            </div>
+            />
+            <span className={styles.username}>{data.username}</span>
+          </div>
         </div>
         <div className={styles.imageContainer}>
           <Image
-          src={data.img}
-          alt='blog-image'
-          fill={true}
-          className={styles.image}
+            src={data.img}
+            alt='blog-image'
+            fill={true}
+            className={styles.image}
           />
         </div>
-        </div>
-        <div className={styles.content}>
-          <p className={styles.text}>
-            {data.content}
-          </p>
       </div>
-      
+      <div className={styles.content}>
+        <p className={styles.text}>
+          {data.content}
+        </p>
+      </div>
+
     </div>
   )
 }
