@@ -4,7 +4,7 @@ import Image from 'next/image';
 import randomImg from '/public/pracImg.jpg'
 
 const getData = async (id) => {
-  const res = await fetch(`${process.env.URL}/api/posts/${id}`,{
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts/${id}`,{
     cache: "no-store",
   });
    return res.json();
