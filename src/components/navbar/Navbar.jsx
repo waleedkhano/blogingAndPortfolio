@@ -57,7 +57,7 @@ const Navbar = () => {
         <div className={`${styles.linkData} ${toggle ? styles.active : ''}`}>
           {
             links.map((e) => (
-              <Link key={e.id} href={e.url} className={styles.link}>
+              <Link key={e.id} href={e.url} onClick={toggleHandler} className={styles.link}>
                 {e.title}
               </Link>
             ))
