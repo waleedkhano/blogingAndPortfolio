@@ -3,35 +3,35 @@ import styles from './page.module.css';
 import Image from 'next/image';
 import randomImg from '/public/pracImg.jpg'
 
-const getData = async (id) => {
-  try {
-    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts/${id}`, {
-      cache: "no-store",
-    });
-    return res.json();
-  } catch (error) {
-    throw error;
-  }
-}
+// const getData = async (id) => {
+//   try {
+//     const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts/${id}`, {
+//       cache: "no-store",
+//     });
+//     return res.json();
+//   } catch (error) {
+//     throw error;
+//   }
+// }
 
-export async function generateMetadata({ params }) {
+// export async function generateMetadata({ params }) {
 
-  const post = await getData(params.id)
-  return {
-    title: post.title,
-    description: post.desc,
-  };
-}
+//   const post = await getData(params.id)
+//   return {
+//     title: post.title,
+//     description: post.desc,
+//   };
+// }
 
 
 const BlogPost = async ({ params }) => {
-  const { id } = params
-  const data = await getData(id)
+  // const { id } = params
+  // const data = await getData(id)
 
 
   return (
     <div className={styles.container}>
-      <div className={styles.top}>
+      {/* <div className={styles.top}>
         <div className={styles.info}>
           <h1 className={styles.title}>
             {data.title}
@@ -63,7 +63,7 @@ const BlogPost = async ({ params }) => {
         <p className={styles.text}>
           {data.content}
         </p>
-      </div>
+      </div> */}
 
     </div>
   )
